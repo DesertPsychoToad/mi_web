@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rana con CSS</title>
+  <style>
+    .frog {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #4CAF50;
+      position: relative;
+      margin: 50px auto;
+    }
+
+    .eye {
+      width: 20px;
+      height: 30px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 40px;
+      left: 35px;
+    }
+
+    .pupil {
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .mouth {
+      width: 50px;
+      height: 30px;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      position: absolute;
+      bottom: 30px;
+      left: 35px;
+      border: 3px solid #333;
+      border-top: none;
+      background-color: #4CAF50;
+    }
+
+    .tongue {
+      width: 40px;
+      height: 20px;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      position: absolute;
+      bottom: 10px;
+      left: 45px;
+      background-color: #FFC0CB;
+    }
+  </style>
+</head>
+<body>
+  <div class="frog">
+    <div class="eye">
+      <div class="pupil"></div>
+    </div>
+    <div class="eye" style="left: 65px;">
+      <div class="pupil"></div>
+    </div>
+    <div class="mouth"></div>
+    <div class="tongue"></div>
+  </div>
+</body>
+</html>
