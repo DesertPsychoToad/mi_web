@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mario Bros con CSS</title>
+  <style>
+    .mario {
+      width: 100px;
+      height: 100px;
+      background-color: #f00;
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .hat {
+      width: 90px;
+      height: 30px;
+      background-color: #0052b0;
+      position: absolute;
+      top: 0;
+      left: 5px;
+    }
+
+    .face {
+      width: 100px;
+      height: 100px;
+      background-color: #fecb00;
+      position: absolute;
+      top: 20px;
+    }
+
+    .eyes {
+      width: 15px;
+      height: 10px;
+      background-color: #000;
+      position: absolute;
+      top: 35px;
+    }
+
+    .eye.left {
+      left: 30px;
+    }
+
+    .eye.right {
+      right: 30px;
+    }
+
+    .nose {
+      width: 8px;
+      height: 10px;
+      background-color: #ff6600;
+      position: absolute;
+      top: 45px;
+      left: 46px;
+    }
+
+    .mouth {
+      width: 25px;
+      height: 8px;
+      background-color: #ff0000;
+      position: absolute;
+      top: 60px;
+      left: 38px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+    }
+
+    .body {
+      width: 80px;
+      height: 70px;
+      background-color: #fecb00;
+      position: absolute;
+      top: 70px;
+      left: 10px;
+    }
+
+    .buttons {
+      width: 6px;
+      height: 6px;
+      background-color: #000;
+      position: absolute;
+      top: 30px;
+    }
+
+    .button1 {
+      left: 35px;
+    }
+
+    .button2 {
+      left: 35px;
+      top: 45px;
+    }
+
+    .button3 {
+      left: 35px;
+      top: 60px;
+    }
+
+    .arms {
+      width: 100px;
+      height: 10px;
+      background-color: #fecb00;
+      position: absolute;
+      top: 100px;
+    }
+
+    .arm.left {
+      left: -10px;
+    }
+
+    .arm.right {
+      right: -10px;
+    }
+
+    .legs {
+      width: 30px;
+      height: 70px;
+      background-color: #fecb00;
+      position: absolute;
+      top: 140px;
+    }
+
+    .leg.left {
+      left: 10px;
+    }
+
+    .leg.right {
+      right: 10px;
+    }
+
+    .shoes {
+      width: 40px;
+      height: 20px;
+      background-color: #000;
+      position: absolute;
+      top: 210px;
+      z-index: -1;
+    }
+
+    .shoe.left {
+      left: 10px;
+    }
+
+    .shoe.right {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="mario">
+    <div class="hat"></div>
+    <div class="face">
+      <div class="eyes">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+      </div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+    <div class="body">
+      <div class="buttons">
+        <div class="button1"></div>
+        <div class="button2"></div>
+        <div class="button3"></div>
+      </div>
+    </div>
+    <div class="arms">
+      <div class="arm left"></div>
+      <div class="arm right"></div>
+    </div>
+    <div class="legs">
+      <div class="leg left"></div>
+      <div class="leg right"></div>
+    </div>
+    <div class="shoes">
+      <div class="shoe left"></div>
+      <div class="shoe right"></div>
+    </div>
+  </div>
+</body>
+</html>
