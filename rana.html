@@ -44,6 +44,7 @@
       border: 3px solid #333;
       border-top: none;
       background-color: #4CAF50;
+      transform: rotate(15deg);
     }
 
     .tongue {
@@ -55,6 +56,57 @@
       bottom: 10px;
       left: 45px;
       background-color: #FFC0CB;
+    }
+
+    .hand {
+      width: 40px;
+      height: 20px;
+      background-color: #4CAF50;
+      position: absolute;
+      top: 45px;
+      left: -10px;
+      transform: rotate(-45deg);
+      border-radius: 10px;
+    }
+
+    .hand.right {
+      left: 90px;
+      transform: rotate(45deg);
+    }
+
+    .foot {
+      width: 30px;
+      height: 10px;
+      background-color: #4CAF50;
+      position: absolute;
+      bottom: 5px;
+      left: 25px;
+      border-radius: 5px;
+    }
+
+    .foot.left {
+      left: 10px;
+    }
+
+    .foot.right {
+      left: 55px;
+    }
+
+    .happy-face {
+      width: 10px;
+      height: 5px;
+      border-bottom-left-radius: 100%;
+      border-bottom-right-radius: 100%;
+      position: absolute;
+      top: 60px;
+      left: 60px;
+      transform: rotate(-10deg);
+      background-color: #FFD700;
+    }
+
+    .happy-face.right {
+      left: 65px;
+      transform: rotate(10deg);
     }
   </style>
 </head>
@@ -68,6 +120,12 @@
     </div>
     <div class="mouth"></div>
     <div class="tongue"></div>
+    <div class="hand"></div>
+    <div class="hand right"></div>
+    <div class="foot left"></div>
+    <div class="foot right"></div>
+    <div class="happy-face"></div>
+    <div class="happy-face right"></div>
   </div>
 </body>
 </html>
