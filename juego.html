@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Juego RPG - Caballero vs Dragón</title>
+  <style>
+    /* Estilos para el juego */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #c0392b;
+    }
+
+    #combate {
+      margin-top: 50px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #2980b9;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    #vidaCaballero, #vidaDragon {
+      font-weight: bold;
+    }
+
+    /* Estilo aleatorio alusivo a la edad medida */
+    #edadMedida {
+      font-size: 32px;
+      padding: 5px;
+      border-radius: 10px;
+      color: #fff;
+    }
+
+    /* Cambio aleatorio de color de fondo */
+    .edad-1 { background-color: #e74c3c; }
+    .edad-2 { background-color: #e67e22; }
+    .edad-3 { background-color: #f1c40f; }
+    .edad-4 { background-color: #27ae60; }
+    .edad-5 { background-color: #3498db; }
+    .edad-6 { background-color: #9b59b6; }
+  </style>
+</head>
+<body>
+  <h1>Juego RPG - Caballero vs Dragón</h1>
+  <div id="combate">
+    <p>
+      Caballero Vida: <span id="vidaCaballero">100</span>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      Dragón Vida: <span id="vidaDragon">150</span>
+    </p>
+    <p>
+      Edad Medida del Caballero: <span id="edadMedida" class="edad-1">20</span>
+    </p>
+    <p>
+      <button onclick="accionCaballero('Atacar')">Atacar</button>
+      <button onclick="accionCaballero('Defender')">Defender</button>
+      <button onclick="accionCaballero('Tomar Posiciones')">Tomar Posiciones</button>
+    </p>
+    <p id="accionDragon"></p>
+    <p id="resultado"></p>
+  </div>
+
+  <script>
+     let guerreroPosiciones = 3;
+    let guerreroVida = 100;
+    let dragonVida = 150;
+
+    function accionCaballero(accion) {
+      const accionesDragon = ['Ataque con Fuego', 'Garra Afilada', 'Vuelo Peligroso'];
+      const accionDragon = accionesDragon[Math.floor(Math.random() * accionesDragon.length)];
+
+      if (accion === 'Atacar') {
+        dragonVida -= getRandomNumber(10, 20);
+      } else if (accion === 'Defender') {
+        guerreroVida += getRandomNumber(5, 10);
+      } else if (accion === 'Tomar Posiciones') {
+        guerreroPosiciones += 1;
+      }
+
+      if (guerreroPosiciones > 3) {
+        guerreroPosiciones = 3;
+      }
+
+      guerreroVida -= getRandomNumber(10, 25);
+
+      document.getElementById('vidaCaballero').innerText = guerreroVida;
+      document.getElementById('vidaDragon').innerText = dragonVida;
+      document.getElementById('accionDragon').innerText = `Dragón realizó: ${accionDragon}`;
+      document.getElementById('resultado').innerText = `¡${accion}!`;
+    }
+
+    function getRandomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+  </script>
+</body>
+</html>
